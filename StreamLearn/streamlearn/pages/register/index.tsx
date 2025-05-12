@@ -1,6 +1,5 @@
 "use client";
 import { FormEvent, useRef, useState } from "react";
-import { register } from "../../app/api/register/route";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -11,18 +10,28 @@ export default function Register() {
   const ref = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async ( formData: FormData) => {
-    const r = await register({
-        email: formData.get("email"),
-        password: formData.get("password"),
-        name: formData.get("name")    
-      });
+    const data = {
+        email: formData.get('email'),
+        password: formData.get('password'),
+        name: formData.get('name'),
+    }
+
+    const response = await fetch("/api/register",  {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data),
+    });
       ref.current?.reset();
-      if(r?.error){
-        setError(r.error);
-        return;
-      } else {
-        return router.push("/login");
+      const result = await response.json();
+      console.log(result.error)
+      if (result?.error) {
+        setError(result.error)
       }
+      else  {
+            return router.push("/login");
+          }
 };
 return(
     <>

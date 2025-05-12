@@ -1,18 +1,16 @@
-import mongoose, { Document, Schema, model } from "mongoose";
-export interface  UserDocument {
-  name:string;
-  email:string;
-  password:string;
-  role:string;
-}
-const usersSchema = new mongoose.Schema<UserDocument>(
-    {
-      name: {
-        type: String,
-        required: [true, "Please provide a name"],
-        trim: true,
-      },
-      email: {
+import  mongoose, { Schema, model } from  "mongoose";
+
+export interface UserDocument {
+    _id: string;
+    email: string;
+    password: string;
+    name: string;
+    role: string
+  }
+
+  const UserSchema = new Schema<UserDocument>({
+
+    email: {
         type: String,
         required: [true, "Please provide an email"],
         unique: true,
@@ -30,11 +28,19 @@ const usersSchema = new mongoose.Schema<UserDocument>(
         enum: ["user", "admin"],
         default: "user",
       },
+    name: {
+        type: String,
+        required: [true, "Please provide a name"],
+        trim: true,
     },
-    { timestamps: true },
-  )
-  
-  const  User  =  mongoose.models?.User  ||  model<UserDocument>('User', usersSchema);
 
-  export  default  User;
+  },
+
+  { timestamps: true },
+
+);
+  
+const  User  =  mongoose.models?.User  ||  model<UserDocument>('User', UserSchema);
+
+export  default  User;
     

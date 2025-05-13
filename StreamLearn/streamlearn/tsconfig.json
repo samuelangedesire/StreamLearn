@@ -26,6 +26,6 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/Models/user.js"
-  ],
+, "pages/index.tsx"  ],
   "exclude": ["node_modules"]
 }

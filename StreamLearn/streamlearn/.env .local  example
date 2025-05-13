@@ -1,1 +1,2 @@
 AUTH_SECRET="JbSisKRRujvVGsymKmOkR5cnb7h0W2me4tf09Rwjq4A=" # Added by `npx auth`. Read more: https://cli.authjs.dev
+MONGODB_URI = mongodb+srv://samuelnzue85:7l076iO2SPsImOeZ@cluster0.tmslln1.mongodb.net/?retryWrites=true&w=majority

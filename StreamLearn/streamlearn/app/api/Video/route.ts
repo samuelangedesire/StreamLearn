@@ -87,7 +87,7 @@ try {
     try {
         await connectMongoDB();
         const video = await Video.find();
-        return NextResponse.json({ video });
+        return NextResponse.json(video);
         
     } catch (error) {
         console.error("Error while trying to get all\n", error);

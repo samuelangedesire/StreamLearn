@@ -29,8 +29,8 @@ export default function Component() {
 
           {/* <!-- Boutons (desktop) --> */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/dashboard" className="hover:bg-indigo-500 px-4 py-2 rounded-md transition">Dashboard</Link>
-            <Link href="/profile" className="hover:bg-indigo-500 px-4 py-2 rounded-md transition">Profil</Link>
+            <Link href="/videoForm" className="hover:bg-indigo-500 px-4 py-2 rounded-md transition">ajouter une video</Link>
+            <Link href="/videoList" className="hover:bg-indigo-500 px-4 py-2 rounded-md transition">Liste des videos</Link>
             <button onClick={() => signOut()} className="bg-red-500 hover:bg-red-400 px-4 py-2 rounded-md transition">Déconnexion</button>
           </div>
         </div>

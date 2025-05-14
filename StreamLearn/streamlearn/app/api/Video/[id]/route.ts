@@ -7,7 +7,7 @@ export async function GET(_, {params}) {
         await connectMongoDB();
         const {id} = params;
         const video = await Video.findById(id);
-        return NextResponse.json({video});
+        return NextResponse.json(video);
     } catch (error) {
         console.error('something went wrong\n', error)
         return NextResponse.json(

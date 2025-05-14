@@ -1,12 +1,15 @@
 'use client'
 import { useState, useRef, FormEvent } from "react"
-import Footer from "../../components/Footer"
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { useRouter } from "next/navigation";
 
  
 
-export default function Video() {
+export default function components() {
 
     const [file, setFile]= useState(null);
+    const router = useRouter();
     const [formData, setFormData] = useState({content: "", title: ""});
     const ref = useRef<HTMLFormElement>(null);
 
@@ -39,8 +42,7 @@ export default function Video() {
         body: form
         });
         if (response.ok) {
-            const result = await response.json()
-            console.log(result)
+            router.push('/videoList')
         } else {
             const result = await response.text();
             console.log(result)
@@ -48,7 +50,9 @@ export default function Video() {
     }
 
     return (
-        <div>
+       <>
+       <Header />
+         <section className="mt-16">
              <main className="bg-white p-1 xs:p-8">
                <div className=" max-w-96 sm:max-w-4xl mx-auto border border-[#4D7C0F] rounded-lg p-8">
                     <h2 className="sm:text-xl text-[12px] font-bold mb-6">Video upload</h2>
@@ -73,31 +77,8 @@ export default function Video() {
                     </form>
                </div>
              </main>
-             <Footer />
-        </div>
+        </section>
+        <Footer />
+       </>
     )
 }
-
-//     const handleUpload = (file) => {
-//     if (!file) return;
- 
-//     const formData = new FormData();
-//     formData.append('file', file);
- 
-//     const xhr = new XMLHttpRequest();
- 
-//     xhr.onload = (obj) => {
-//       if (xhr.status === 200) {
-//         alert("File uploaded successfully!")
-//       } else {
-//         alert("File could not be uploaded!")
-//       }
-//     };
- 
-//     xhr.onerror = () => {
-//       alert("File could not be uploaded!")
-//     };
- 
-//     xhr.open('POST', '/api/Video');
-//     xhr.send(formData);
-//   };

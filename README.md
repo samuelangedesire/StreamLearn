@@ -2,12 +2,12 @@
 
 StreamLearn est une application pour l'apprentissage des jeunes.
 
-# Description
+## Description
 
 Au travers de l'authentification de l'administrateur peut ajouter et supprimer des videos à sa guise ce qui fait que 
 l'application peut avoir du contenue neuf par consequent les jeunes peuvent apprendre de nouvelle chose.
 
-# Fonctionnalités
+## Fonctionnalités
 
 - Authentification utilisateur et admin
 - Création et suppression de video
@@ -16,7 +16,7 @@ l'application peut avoir du contenue neuf par consequent les jeunes peuvent appr
 - Interface responsive
 - Middleware de sécurité (session)
 
-# Technologies utilisés
+## Technologies utilisés
 
 - Next.js
 - MongoDB avec Mongoose
@@ -24,8 +24,11 @@ l'application peut avoir du contenue neuf par consequent les jeunes peuvent appr
 - NextAuth (authentification)
 - TypeScript
 
-# Installation 
+## Installation 
 
-git clone 
-cd streamlearn
-npm install
+-git clone git@github.com:samuelangedesire/StreamLearn.git
+-cd streamlearn
+-npm install
+
+## Commande utile
+- npm run dev

@@ -24,6 +24,13 @@ l'application peut avoir du contenue neuf par consequent les jeunes peuvent appr
 - NextAuth (authentification)
 - TypeScript
 
+## Raison du choix des technologies
+
+- nextjs est à la fois frontend et backend
+- nextjs à un routing basé sur le système de fichiers.
+- Redirections, protection des routes (via middlewares et auth), très faciles à mettre en place.
+- actualisation des page sans recharger
+
 ## Installation 
 
 -git clone git@github.com:samuelangedesire/StreamLearn.git

@@ -34,8 +34,8 @@ l'application peut avoir du contenue neuf par consequent les jeunes peuvent appr
 ## Installation 
 
 - git clone git@github.com:samuelangedesire/StreamLearn.git
-- cd StreamLearn/streamlearn
-- changer le fichier ".env.local example" en ".env.local"
+- cd streamlearn
+- changer le fichier ".env.local example" en ".env"
 - npm install
 
 ## Commande utile

@@ -67,7 +67,7 @@ try {
       const fileUrl = `${relativeUploadDir}/${filename}`;
   
       // Save to database
-      await connectMongoDB();
+     await connectMongoDB();
      await Video.create({title, content, url: fileUrl})
   
       return NextResponse.json(

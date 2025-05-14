@@ -41,7 +41,7 @@ return(
         <form action={handleSubmit} id="registrationForm" className="space-y-6" method="POST">
          {error && <div className="">{error}</div>}
             <div>
-                <label htmlFor="username" className="block text-indigo-900 font-semibold mb-2">Username</label>
+                <label htmlFor="name" className="block text-indigo-900 font-semibold mb-2">Username</label>
                 <input 
                     type="text" 
                     id="name" 
@@ -92,7 +92,7 @@ return(
 
         <p className="text-center text-gray-600 mt-6">
             Vous avez un compte? 
-            <Link href="/login" className="text-indigo-800 font-semibold hover:text-blue-900 transition-colors duration-300">Sign In</Link>
+            <Link href="/login" className="text-indigo-800 font-semibold hover:text-blue-900 transition-colors duration-300">Connexion</Link>
         </p>
     </div>
   

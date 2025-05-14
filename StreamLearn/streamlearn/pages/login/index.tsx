@@ -65,7 +65,7 @@ return (
 
         <p className="text-center text-gray-600 mt-6">
             Already have an account? 
-            <Link href="/register" className="text-indigo-800 font-semibold hover:text-blue-900 transition-colors duration-300">Sign In</Link>
+            <Link href="/register" className="text-indigo-800 font-semibold hover:text-blue-900 transition-colors duration-300">Inscription</Link>
         </p>
     </div>
  </div>
